@@ -1,10 +1,7 @@
-
 import math
 
 
 class Frac:
-
-
     def __init__(self, numerator: int, denominator: int):
         if denominator == 0 or not (isinstance(numerator, int) and isinstance(denominator, int)) :
             raise Exception(f"Invalid arguments {numerator} and {denominator}!")
@@ -13,12 +10,11 @@ class Frac:
         self.denominator = denominator
 
     def __expand(self, expander: int):
-
         return Frac(self.numerator * expander, self.denominator * expander)
 
     def __reduce(self, reducor):
         if  self.numerator % reducor or self.denominator % reducor:
-            raise Exception(f"Can't reduce with {reducor}")
+            raise Exception(f"Can't reduce with {reducor}!")
         else:
             return Frac(self.numerator // reducor, self.denominator // reducor)
 
@@ -33,6 +29,7 @@ class Frac:
 
         elif isinstance(other, int):
             temp = Frac(self.numerator + other * self.denominator, self.denominator)
+
             return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
     def __radd__(self, other):
@@ -50,6 +47,7 @@ class Frac:
 
             return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
+
     def __rmul__(self, other):
         return self.__mul__(other)
 
@@ -57,12 +55,18 @@ class Frac:
 
     def __truediv__(self, other):
         if isinstance(other, Frac):
-            temp = self * ~ other
+            temp = self * ~other
             return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
     def __sub__(self, other):
         if isinstance(other, Frac):
             return self + (-other)
+        elif isinstance(other, int):
+            tempfrac = Frac(other, 1)
+            return tempfrac + (-self)
+
+    def __rsub__(self, other):
+        return self.__sub__(other)
 
     def __invert__(self):
         return Frac(self.denominator, self.numerator)
@@ -81,6 +85,16 @@ class Frac:
             return self * self.__pow__(power - 1) if power != 1 else self
         else:
             raise Exception(f"Power must be int, not {type(power)}")
+
+    def __rpow__(self, other):
+        if not ( isinstance(other, int) or isinstance(other, float) ):
+            raise Exception(f"Base must be int, not {type(other)}!")
+
+        return self.__nth_root(other ** self.numerator, self.denominator)
+
+    @staticmethod
+    def __nth_root(base, n):
+        return base ** (1 / n)
 
 
     @staticmethod
@@ -106,7 +120,7 @@ class Frac:
 
 
 if __name__ == "__main__":
-    print(Frac(3, 4) * Frac(2, 3))
+    print(Frac(5, 4) * Frac(2, 11))
 
 
 

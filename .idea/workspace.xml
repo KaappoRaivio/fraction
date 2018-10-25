@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c28dc3de-1117-47b8-a64a-a6334b4f0e4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frac.py" beforeDir="false" afterPath="$PROJECT_DIR$/frac.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,22 +21,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="912" />
+          <entry key="py" value="1393" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="912" />
+          <entry key="Python" value="1393" />
         </counts>
       </usages-collector>
     </session>
@@ -45,14 +46,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frac.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="415">
+              <caret line="122" column="35" lean-forward="true" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
               <folding>
-                <marker date="1540464534857" expanded="true" signature="1419:1460" ph="..." />
-                <marker date="1540464534857" expanded="true" signature="1937:1980" ph="..." />
-                <marker date="1540464534857" expanded="true" signature="2189:2266" ph="..." />
-                <marker date="1540464534857" expanded="true" signature="2440:2441" ph="..." />
-                <marker date="1540464534857" expanded="true" signature="2621:2820" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="1417:1458" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="1936:1979" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="2187:2444" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="2403:2444" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="2618:2619" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="2799:3324" ph="..." />
+                <marker date="1540467039620" expanded="true" signature="3286:3324" ph="..." />
               </folding>
             </state>
           </provider>
@@ -216,16 +219,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/.IdeaIC2018.2/system/python_stubs/-1247971763/sys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="425" column="4" selection-start-line="425" selection-start-column="4" selection-end-line="425" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/pdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="1584" column="32" selection-start-line="1584" selection-start-column="32" selection-end-line="1584" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frac.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="415">
+          <caret line="122" column="35" lean-forward="true" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
           <folding>
-            <marker date="1540464534857" expanded="true" signature="1419:1460" ph="..." />
-            <marker date="1540464534857" expanded="true" signature="1937:1980" ph="..." />
-            <marker date="1540464534857" expanded="true" signature="2189:2266" ph="..." />
-            <marker date="1540464534857" expanded="true" signature="2440:2441" ph="..." />
-            <marker date="1540464534857" expanded="true" signature="2621:2820" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="1417:1458" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="1936:1979" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="2187:2444" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="2403:2444" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="2618:2619" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="2799:3324" ph="..." />
+            <marker date="1540467039620" expanded="true" signature="3286:3324" ph="..." />
           </folding>
         </state>
       </provider>
