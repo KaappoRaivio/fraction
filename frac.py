@@ -18,7 +18,7 @@ class Frac:
 
     def __reduce(self, reducor):
         if  self.numerator % reducor or self.denominator % reducor:
-            raise Exception("Can't reduce with this")
+            raise Exception(f"Can't reduce with {reducor}")
         else:
             return Frac(self.numerator // reducor, self.denominator // reducor)
 
@@ -42,7 +42,7 @@ class Frac:
         if isinstance(other, Frac):
             temp = Frac(other.numerator * self.numerator, self.denominator * other.denominator)
 
-            return temp.__reduce(self.__gcd(self.numerator, self.denominator))
+            return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
         elif isinstance(other, int):
             temp = Frac(self.numerator * other, self.denominator)
@@ -105,9 +105,8 @@ class Frac:
         return lcm
 
 
-a = Frac(3, 4)
-b = Frac(6, 9)
-print(a ** 3.0)
+if __name__ == "__main__":
+    print(Frac(3, 4) * Frac(2, 3))
 
 
 
