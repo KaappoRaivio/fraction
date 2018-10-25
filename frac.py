@@ -29,11 +29,11 @@ class Frac:
             expandedother = other.__expand(self.__lcm(self.denominator, other.denominator) // other.denominator)
 
             temp = Frac(expandedother.numerator + expandedself.numerator, expandedself.denominator)
-            return temp.__reduce(self.__gcd(self.numerator, self.denominator))
+            return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
         elif isinstance(other, int):
             temp = Frac(self.numerator + other * self.denominator, self.denominator)
-            return temp.__reduce(self.__gcd(self.numerator, self.denominator))
+            return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
     def __radd__(self, other):
         return self.__add__(other)
@@ -51,7 +51,7 @@ class Frac:
             return temp.__reduce(self.__gcd(temp.numerator, temp.denominator))
 
     def __rmul__(self, other):
-        return self.__add__(other,0)
+        return self.__mul__(other)
 
 
 
@@ -71,7 +71,7 @@ class Frac:
         return self.numerator / self.denominator
 
     def __str__(self):
-        return f"Frac({self.numerator}, {self.denominator})"
+        return f"({self.numerator} / {self.denominator})"
 
     def __neg__(self):
         return Frac(-self.numerator, self.denominator)
@@ -79,11 +79,12 @@ class Frac:
     def __pow__(self, power, modulo=None):
         if isinstance(power, int):
             return self * self.__pow__(power - 1) if power != 1 else self
+        else:
+            raise Exception(f"Power must be int, not {type(power)}")
 
 
     @staticmethod
     def __gcd(x, y):
-        print(x, y, math.gcd(x, y))
         return math.gcd(x, y)
 
 
@@ -105,6 +106,8 @@ class Frac:
 
 
 a = Frac(3, 4)
-b = Frac(3, 4)
+b = Frac(6, 9)
+print(a ** 3.0)
+
 
 
